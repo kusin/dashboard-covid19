@@ -39,7 +39,6 @@ with st.container():
     st.markdown("## Statistical Analysis and Data Visualization of Covid-19 in Indonesia Country");
     st.markdown("- Summary statistics, *updated 20 Oktober 2020");
 
-
 # container-summary of covid-19
 with st.container():
     col1, col2, col3, col4, col5, col6,col7, col8 = st.columns(8);
@@ -108,8 +107,6 @@ with st.container():
         ),
         use_container_width=True
     );
-
-
 
 # container-scatter-plot
 with st.container():
