@@ -1,7 +1,7 @@
 import streamlit as st;
 import pandas as pd;
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def df_country():
     # load dataset covid-19
     dataset = pd.read_excel("dataset/dataset_covid.xlsx", sheet_name="data-covid-indonesia", engine="openpyxl");
@@ -15,7 +15,7 @@ def df_country():
     # return value
     return dataset;
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def df_province():
     return pd.read_excel("dataset/dataset_covid.xlsx", sheet_name="data-covid-provinsi", engine="openpyxl");
 
