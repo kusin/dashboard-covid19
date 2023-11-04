@@ -37,9 +37,7 @@ dataset = df_country()
 
 # container-header-fuild
 with st.container():
-    st.markdown(
-        "## Statistical Analysis and Data Visualization of Covid-19 in Indonesia Country")
-    st.text("- Summary statistics, *updated 20 Oktober 2020")
+    st.markdown("## Statistical Analysis and Data Visualization of Covid-19 in Indonesia Country")
 
 # container-summary of covid-19
 with st.container():
@@ -86,6 +84,9 @@ with st.container():
         value="{:,}".format(dataset["daily_dead"].iloc[-1]),
         delta="26 People"
     )
+    st.text("- Summary statistics, *updated 20 Oktober 2020");
+    avs.add_vertical_space(2);
+    
 
 # --------------------------------------------------------------------------------------- #
 # data acquisition province ------------------------------------------------------------- #
@@ -104,8 +105,8 @@ df_positive = df_positive[["province", "sum_positive"]].head();
 
 # container pie-plot and bar-plot for sum_positive
 with st.container():
+    st.success("Most cases top 5 province of sum positive");
     col1, col2 = st.columns(2);
-    col1.markdown("- percentage top 5 province of sum positive");
     col1.plotly_chart(
         px.pie(
             df_positive,
@@ -117,7 +118,6 @@ with st.container():
         ),
         use_container_width=True
     );
-    col2.markdown("- most cases top 5 province of sum positive");
     col2.plotly_chart(
         px.bar(
             df_positive,
@@ -134,8 +134,8 @@ df_recovery = df_recovery[["province", "sum_recovery"]].head();
 
 # container pie-plot and bar-plot for sum-recovery
 with st.container():
+    st.success("Most cases top 5 province of sum recovery");
     col1, col2 = st.columns(2);
-    col1.markdown("- percentage top 5 province of sum recovery");
     col1.plotly_chart(
         px.pie(
             df_recovery,
@@ -147,7 +147,6 @@ with st.container():
         ),
         use_container_width=True
     );
-    col2.markdown("- most cases top 5 province of sum recovery");
     col2.plotly_chart(
         px.bar(
             df_recovery,
@@ -164,8 +163,8 @@ df_dead = df_dead[["province", "sum_dead"]].head();
 
 # container pie-plot and bar-plot for sum-dead
 with st.container():
+    st.success("Most cases top 5 province of sum dead");
     col1, col2 = st.columns(2);
-    col1.markdown("- percentage top 5 province of sum dead");
     col1.plotly_chart(
         px.pie(
             df_dead,
@@ -177,7 +176,6 @@ with st.container():
         ),
         use_container_width=True
     );
-    col2.markdown("- most cases top 5 province of sum dead");
     col2.plotly_chart(
         px.bar(
             df_dead,
