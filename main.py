@@ -185,3 +185,10 @@ with st.container():
         ),
         use_container_width=True
     );
+
+
+# container footer
+with st.container():
+    avs.add_vertical_space(2);
+    st.text("Copyright all rights reserved 2023 by Aryajaya Alamsyah, M.Kom.");
+    
