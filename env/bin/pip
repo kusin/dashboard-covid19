@@ -1,4 +1,4 @@
-#!/home/lunox/Documents/dashboard-covid19/env/bin/python3
+#!/home/lunox/Documents/dashboard-covid19/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
