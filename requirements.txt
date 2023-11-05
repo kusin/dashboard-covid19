@@ -9,6 +9,7 @@ click==8.1.7
 contourpy==1.2.0
 cycler==0.12.1
 entrypoints==0.4
+et-xmlfile==1.1.0
 Faker==19.13.0
 favicon==0.7.0
 fonttools==4.44.0
@@ -30,6 +31,7 @@ matplotlib==3.8.1
 mdurl==0.1.2
 more-itertools==10.1.0
 numpy==1.26.1
+openpyxl==3.1.2
 packaging==23.2
 pandas==2.1.2
 Pillow==10.1.0
